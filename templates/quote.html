@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="Symbol" placeholder="Symbol" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Quote</button>
+        <hr>
+        <p>Quote is used to get current market price of share you enter.</p>
+        <hr>
+        <p>For Example: </p>
+        <hr>
+        <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+            <tbody>
+                <tr>
+                    <td>AAPL</td>
+                    <td>Apple Inc.</td>
+                </tr>
+                <tr>
+                    <td>GOOGL</td>
+                    <td>Alphabet Inc Class A</td>
+                </tr>
+                <tr>
+                    <td>MSFT</td>
+                    <td>Microsoft Corporation</td>
+                </tr>
+                <tr>
+                    <td>AMZN</td>
+                    <td>Amazon.com, Inc.</td>
+                </tr>
+                <tr>
+                    <td>NFLX</td>
+                    <td>Netflix Inc</td>
+                </tr>
+            </tbody>
+    </table>
+    </form>
+{% endblock %}
